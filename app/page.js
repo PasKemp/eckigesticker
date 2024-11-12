@@ -1,95 +1,70 @@
-import Image from "next/image";
-import styles from "./page.module.css";
+// pages/index.js
+import Head from 'next/head';
+import Image from 'next/image';
+import styles from '../app/styles/Home.module.css';
 
 export default function Home() {
   return (
-    <div className={styles.page}>
-      <main className={styles.main}>
-        <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol>
-          <li>
-            Get started by editing <code>app/page.js</code>.
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
+      <div>
+        <Head>
+          <title>Eckige Sticker</title>
+          <meta name="description" content="Finde deinen Style mit kreativen Stickern" />
+          <link rel="icon" href="/favicon.ico" />
+        </Head>
 
-        <div className={styles.ctas}>
-          <a
-            className={styles.primary}
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className={styles.logo}
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-            className={styles.secondary}
-          >
-            Read our docs
-          </a>
-        </div>
-      </main>
-      <footer className={styles.footer}>
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
+        {/* Header-Bereich */}
+        <header className={styles.header}>
+          <div className={styles.container}>
+            <h1 className={styles.logo}>Eckige Sticker</h1>
+            {/*
+            <nav className={styles.nav}>
+              <a href="#home">Home</a>
+              <a href="#about">Über Uns</a>
+              <a href="#shop">Shop</a>
+              <a href="#contact">Kontakt</a>
+            </nav>
+            */}
+          </div>
+        </header>
+
+        {/* Hero-Bereich
+        <section
+            className={styles.hero}
+            style={{
+              backgroundImage: `url('/images/hero-banner.jpg')`,
+              backgroundSize: 'cover',
+              backgroundPosition: 'center',
+            }}
         >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
-    </div>
+          <div className={styles.heroContent}>
+            <h2>Finde deinen Style mit kreativen Stickern</h2>
+            <p>Individuelle Designs für jeden Anlass</p>
+            <a href="#shop" className={styles.ctaButton}>Jetzt entdecken</a>
+          </div>
+        </section>
+        */}
+
+        {/* Hauptinhalt-Bereich */}
+        <main className={styles.mainContent}>
+          <div className={styles.container}>
+            <div className={styles.cardGrid}>
+              <div className={styles.card}>
+                <img src="/images/geld-her-sticker.png" alt="Sticker 1" className={styles.cardImage}/>
+              </div>
+              <div className={styles.card}>
+                <img src="/images/bursche-sticker.png" alt="Sticker 2" className={styles.cardImage}/>
+              </div>
+              <div className={styles.card}>
+                <img src="/images/komm-lass-Sticker.png" alt="Sticker 2" className={styles.cardImage}/>
+              </div>
+            </div>
+          </div>
+        </main>
+
+        {/* Footer-Bereich */}
+        <footer className={styles.footer}>
+          <p>&copy; 2024 EckigeSticker. Alle Rechte vorbehalten.</p>
+        </footer>
+      </div>
   );
 }

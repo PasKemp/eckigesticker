@@ -1,0 +1,153 @@
+/* styles/Home.module.css */
+
+/* Grundlayout */
+.body, .html {
+    font-family: 'Arial', sans-serif;
+    color: #333;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background-color: #f9f5f3;
+    font-size: 18px; /* Grundgröße des Textes */
+}
+
+.container {
+    width: 90%;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+/* Header */
+.header {
+    background-color: #4a4e69;
+    color: white;
+    padding: 1.5rem 0; /* Erhöhte Padding */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 4px solid #9a8c98;
+}
+
+.logo {
+    font-size: 4.4rem; /* Größeres Logo */
+    font-weight: bold;
+}
+
+.nav a {
+    color: #f2e9e4;
+    margin-left: 2rem;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.1rem; /* Größere Links */
+    transition: color 0.3s;
+}
+
+.nav a:hover {
+    color: #f9ada0;
+}
+
+/* Hero-Bereich */
+.hero {
+    background-size: cover;
+    background-position: center;
+    color: white;
+    padding: 6rem 0; /* Größeres Padding für mehr Raum */
+    text-align: center;
+    border-radius: 12px;
+    margin-top: 1.5rem;
+}
+
+.heroContent h2 {
+    font-size: 3.5rem; /* Vergrößerter Haupttitel */
+    color: #f9ada0;
+    margin-bottom: 1.5rem;
+}
+
+.heroContent p {
+    font-size: 1.5rem; /* Größerer Text */
+    color: #f2e9e4;
+}
+
+.ctaButton {
+    display: inline-block;
+    margin-top: 2rem;
+    padding: 1rem 2rem; /* Größerer Button */
+    background-color: #9a8c98;
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    font-size: 1.2rem; /* Größerer Text für CTA */
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.ctaButton:hover {
+    background-color: #c9ada7;
+}
+
+/* Hauptinhalt */
+.mainContent {
+    padding: 3rem 0;
+    text-align: center;
+    flex: 1;
+}
+
+.mainContent h3 {
+    color: #333;
+    margin-bottom: 2rem;
+    font-size: 2.4rem; /* Vergrößerter Hauptinhalt */
+}
+
+.cardGrid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: center;
+    margin-top: 1.5rem;
+}
+
+.card {
+    background-color: #f2e9e4;
+    border-radius: 12px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    padding: 2rem;
+    max-width: 350px;
+    text-align: center;
+    transition: transform 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-8px);
+}
+
+.card img {
+    width: 100%;
+    border-radius: 8px;
+    margin-bottom: 1.5rem;
+}
+
+.card h4 {
+    color: #4a4e69;
+    margin-bottom: 1rem;
+    font-size: 1.6rem; /* Vergrößerter Kartentitel */
+}
+
+.card p {
+    color: #555;
+    font-size: 1.1rem; /* Größerer Text */
+}
+
+/* Footer */
+.footer {
+    background-color: #4a4e69;
+    color: #f2e9e4;
+    text-align: center;
+    padding: 2rem 0;
+    margin-top: auto;
+    border-top: 4px solid #9a8c98;
+}
+
+.footer p {
+    font-size: 1.1rem; /* Größerer Footer-Text */
+    color: #f2e9e4;
+}
