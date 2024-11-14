@@ -1,0 +1,14 @@
+stages:
+  - build
+
+prod_build:
+  image: node:20.14.0
+  stage: build
+  script:
+    - NODE_ENV=production
+    - yarn install --frozen-lockfile --check-files
+    - yarn test
+    - yarn build
+  artifacts:
+    paths:
+      - build/
